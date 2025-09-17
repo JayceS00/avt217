@@ -2,5 +2,32 @@
 /* CSS Document */
 
 body {
-	background-color: blueviolet;
+	background-color: lightgrey;
+	margin-left:10%;
+	margin-right:5%;
+	font-family: sans-serif;
+}
+header {
+	background-color: grey;
+	padding-bottom: 20px;
+}
+nav {
+	color: darkgrey;
+}
+ul {
+
+}
+li{
+	list-style-type: none;
+	display: inline;
+	margin-right: 10px;
+}
+
+.posttime {
+	color: yellow;
+	font-size: 0.7em;
+}
+
+h2, p, h3 {
+	color: Navy;
 }
