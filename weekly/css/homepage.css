@@ -8,6 +8,8 @@ body {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+    line-height:1.6em;
+    background-color:white;
 	}
 
 #wrapper{
@@ -17,7 +19,7 @@ body {
 }
 
 h1 {
-	font-family: am-novecento, sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 a:link {
@@ -25,20 +27,21 @@ a:link {
 	text-decoration: none;
 }
 a:visited{
-	color:black;
+	color:grey;
 }
 a:hover {
-	color:grey;
+	color:lightgrey;
 	text-decoration:underline;
 }
 a:active {
-	color:pink;
+	color:ivory;
 }
 .weekly{
 	width:45%;
 	float:left;
 	margin: 0 5%;
 }
+
 #project{
 	width:45%;
 	float:left;
