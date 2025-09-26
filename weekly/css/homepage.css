@@ -23,11 +23,11 @@ h1 {
 }
 
 a:link {
-	color:darkblue;
+	color:grey;
 	text-decoration: none;
 }
 a:visited{
-	color:grey;
+	color:darkblue;
 }
 a:hover {
 	color:lightgrey;
