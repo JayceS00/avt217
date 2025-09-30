@@ -1,14 +1,14 @@
 @charset "UTF-8";
-/* CSS Document */
 
-/* Reset */
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base typography */
+
 body {
   font-family: 'Merriweather', serif;
   font-size: 1rem;
@@ -20,7 +20,7 @@ body {
   padding: 2rem;
 }
 
-/* Header */
+
 header {
   text-align: center;
   margin-bottom: 3rem;
@@ -40,7 +40,7 @@ header h1 {
   font-style: italic;
 }
 
-/* Headings */
+
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
@@ -56,13 +56,13 @@ h3 {
   color: #0055aa;
 }
 
-/* Paragraphs */
+
 p {
   margin-bottom: 1.2rem;
   max-width: 70ch;
 }
 
-/* Lists */
+
 ul {
   margin: 1rem 0 1.5rem 1.5rem;
   list-style-type: square;
@@ -72,7 +72,7 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* ---- Panels for each contrast ---- */
+
 .panel {
   background: #fff;
   border-left: 6px solid #0055aa;
@@ -82,7 +82,7 @@ li {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-/* Size */
+
 .big-text {
   font-size: 2rem;
   font-weight: 700;
@@ -92,13 +92,13 @@ li {
   color: #555;
 }
 
-/* Weight */
+
 .heavy {
   font-weight: 900;
   color: #111;
 }
 
-/* Form */
+
 .caps {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -108,7 +108,7 @@ li {
   color: #333;
 }
 
-/* Structure */
+
 .serif {
   font-family: 'Merriweather', serif;
 }
@@ -118,7 +118,7 @@ li {
   color: #444;
 }
 
-/* Texture */
+
 .texture-example {
   border: 1px solid #ddd;
   padding: 0.5rem;
@@ -130,7 +130,7 @@ li {
   letter-spacing: -0.5px;
 }
 
-/* Color */
+
 .highlight {
   color: #d12f2f;
   font-weight: 700;
@@ -139,7 +139,7 @@ li {
   color: #888;
 }
 
-/* Direction */
+
 .vertical {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -154,7 +154,7 @@ li {
   margin-left: 0.5rem;
 }
 
-/* Footer */
+
 footer {
   text-align: center;
   margin-top: 3rem;
@@ -162,7 +162,7 @@ footer {
   color: Beige;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   body {
     font-size: 0.95rem;
