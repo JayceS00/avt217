@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.c1 {
+  width:908px;
+  height:67px;
+  /*float:left;*/
+  margin: 0 0 20px 0;
+  background-color: Grey;
+}
+
+.c2 {
+  width:908px;
+  height:55px;
+  margin: 0;
+  background-color: Grey;
+}
+
+#flexbook {
+  width: 908px;
+  height:456px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.fc1 {
+  width: 908px;
+  height: 31px;
+  background-color: Navy;
+}
+
+.fc {
+  width: 207px;
+  height: 382px;
+  flex-direction: row;
+  background-color: beige;
+}
+
+}
