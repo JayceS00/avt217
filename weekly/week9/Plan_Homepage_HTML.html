@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The 1975 — Homepage Div Plan (Desktop)</title>
   <style>
-    /* --- page scaffold (visual only) --- */
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
@@ -17,7 +16,6 @@
       align-items: flex-start;
     }
 
-    /* center a 1440px desktop canvas */
     .page {
       width: 1440px;
       min-height: 900px;
@@ -29,7 +27,6 @@
       border-right: 1px solid #1a1a1a;
     }
 
-    /* NAV (logo left, menu right) */
     .nav {
       width: 100%;
       height: 96px;
@@ -50,7 +47,6 @@
       border-radius: 12px;
     }
 
-    /* MAIN column */
     .main {
       width: 100%;
       display: flex;
@@ -65,7 +61,6 @@
       width: 520px; height: 64px;
       border: 2px solid #6a6a6a;
       border-radius: 6px;
-      /* represents "THE 1975" heading */
     }
 
     .album-card {
@@ -75,7 +70,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 10px solid #3a3a3a; /* outer gray frame seen in design */
+      border: 10px solid #3a3a3a;
     }
     .album-frame {
       width: 640px; height: 420px;
@@ -93,17 +88,14 @@
       width: 520px; height: 28px;
       border: 2px dashed #555;
       border-radius: 4px;
-      /* represents tagline */
     }
 
     .cta {
       width: 260px; height: 52px;
       border: 2px solid #fff;
       border-radius: 10px;
-      /* represents 'listen now' button */
     }
 
-    /* FOOTER */
     .footer {
       width: 100%;
       height: 100px;
@@ -114,25 +106,20 @@
       padding: 0 64px;
     }
 
-    /* purely for viewing on smaller screens */
     @media (max-width: 1480px) {
       .page { width: 100%; }
     }
   </style>
 </head>
 <body>
-  <!-- PARENT -->
   <div class="page">
-    
-    <!-- CHILD: NAV -->
+
     <div class="nav">
       <div class="logo"></div>
       <div class="menu"></div>
     </div>
 
-    <!-- CHILD: MAIN (column) -->
     <div class="main">
-      <!-- GRANDCHILDREN of .page, children of .main -->
       <div class="title"></div>
 
       <div class="album-card">
@@ -145,7 +132,6 @@
       <div class="cta"></div>
     </div>
 
-    <!-- CHILD: FOOTER -->
     <div class="footer"></div>
   </div>
 </body>
