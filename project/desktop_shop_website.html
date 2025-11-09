@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | The 1975</title>
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="desktop_home_website.html"><img src="img/Website_logo.png" alt="The 1975 logo"></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="desktop_home_website.html">Home</a></li>
+        <li><a href="desktop_about_website.html">About</a></li>
+        <li><a href="desktop_music_website.html">Music</a></li>
+        <li><a href="desktop_tour_website.html">Tour</a></li>
+        <li><a href="desktop_shop_website.html" class="active">Shop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>SHOP</h1>
+    </section>
+
+    <section class="search-bar">
+      <input id="shopSearch" type="text" placeholder="Search" aria-label="search products">
+    </section>
+
+    <section class="shop-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/logo_tee.jpg" alt="Logo T-Shirt">
+          <a href="https://storeus.the1975.com/" class="buy-btn">Buy</a>
+        </div>
+        <h3>The 1975 Logo T-Shirt</h3>
+        <p>$40</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/beingfunny_lp.jpg" alt="Being Funny LP">
+          <a href="https://store.dirtyhit.co.uk/bfiafl-us" class="buy-btn">Buy</a>
+        </div>
+        <h3>Being Funny LP</h3>
+        <p>$36</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/collab_hoodie.jpg" alt="Collab Hoodie">
+          <a href="https://storeus.the1975.com/" class="buy-btn">Buy</a>
+        </div>
+        <h3>Collab Hoodie</h3>
+        <p>$85</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/tour_poster.jpg" alt="Tour 2023 Poster">
+          <a href="https://store.dirtyhit.co.uk/bfiafl-us" class="buy-btn">Buy</a>
+        </div>
+        <h3>Tour 2023 Poster</h3>
+        <p>$20</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/logo_cap.jpg" alt="Logo Cap">
+          <a href="https://storeus.the1975.com/" class="buy-btn">Buy</a>
+        </div>
+        <h3>Logo Cap</h3>
+        <p>$25</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/vinyl_set.jpg" alt="Live Album Vinyl Set">
+          <a href="https://store.dirtyhit.co.uk/bfiafl-us" class="buy-btn">Buy</a>
+        </div>
+        <h3>Live Album Vinyl Set</h3>
+        <p>$70</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/graphic_tee.jpg" alt="Graphic T-Shirt">
+          <a href="https://storeus.the1975.com/" class="buy-btn">Buy</a>
+        </div>
+        <h3>Graphic T-Shirt</h3>
+        <p>$40</p>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/long_sleeve.jpg" alt="Long Sleeve">
+          <a href="https://storeus.the1975.com/" class="buy-btn">Buy</a>
+        </div>
+        <h3>Long Sleeve</h3>
+        <p>$50</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 The 1975 | All rights reserved</p>
+    <div class="socials">
+      <a href="https://the-1975.ffm.to/instagram"><img src="img/instagram-icon.svg" alt="Instagram"></a>
+      <a href="https://the-1975.ffm.to/tiktok"><img src="img/tiktok-icon.svg" alt="TikTok"></a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('shopSearch');
+      const productCards = document.querySelectorAll('.product-card');
+
+      if (!searchInput || productCards.length === 0) {
+        console.warn('Search: check #shopSearch and .product-card exist');
+        return;
+      }
+
+      const originalDisplay = new Map([...productCards].map(c => [c, getComputedStyle(c).display || 'block']));
+
+      function applyFilter(term) {
+        term = term.toLowerCase().trim();
+        let firstMatch = null;
+
+        productCards.forEach(card => {
+          const title = (card.querySelector('h3')?.textContent || '').toLowerCase();
+          const match = term === '' || title.includes(term);
+
+          if (match) {
+            card.style.display = originalDisplay.get(card);
+            card.style.opacity = '1';
+            card.style.outline = term ? '2px solid white' : 'none';
+            if (!firstMatch && term) firstMatch = card;
+          } else {
+            card.style.display = 'none';
+            card.style.outline = 'none';
+          }
+        });
+
+        if (firstMatch) {
+          firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      searchInput.addEventListener('input', (e) => applyFilter(e.target.value));
+    });
+  </script>
+</body>
+</html>
