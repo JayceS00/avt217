@@ -48,5 +48,35 @@
       <a href="https://the-1975.ffm.to/tiktok"><img src="img/tiktok-icon.svg" alt="TikTok"></a>
     </div>
   </footer>
+
+  <script>
+  const albums = [
+    { img: "img/brief_album.png", title: "A BRIEF INQUIRY INTO ONLINE RELATIONSHIPS" },
+    { img: "img/notes_album.jpg", title: "NOTES ON A CONDITIONAL FORM" },
+    { img: "img/beingfunny_album.jpg", title: "BEING FUNNY IN A FOREIGN LANGUAGE" },
+    { img: "img/sleep_album.jpg", title: "I LIKE IT WHEN YOU SLEEP, FOR YOU ARE SO BEAUTIFUL YET SO UNAWARE OF IT" }
+  ];
+
+  const albumImg = document.querySelector(".album-frame img");
+  const albumTitle = document.querySelector(".hero h2");
+
+  let index = 0;
+
+  function changeAlbum() {
+    index = (index + 1) % albums.length;
+    albumImg.style.opacity = 0;
+    albumTitle.style.opacity = 0;
+
+    setTimeout(() => {
+      albumImg.src = albums[index].img;
+      albumTitle.textContent = albums[index].title;
+      albumImg.style.opacity = 1;
+      albumTitle.style.opacity = 1;
+    }, 600);
+  }
+
+  setInterval(changeAlbum, 3000);
+ </script>
+
 </body>
 </html>
