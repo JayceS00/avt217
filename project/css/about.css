@@ -10,9 +10,6 @@ body {
   background-color: #000;
   color: #fff;
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,22 +46,18 @@ header {
   font-weight: 600;
 }
 
-.menu-toggle {
+#menu-toggle {
   display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 26px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
   cursor: pointer;
 }
 
 .hero {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
   margin-top: 40px;
 }
 
@@ -74,34 +67,80 @@ header {
   letter-spacing: 2px;
 }
 
-.album-frame {
+.band-card {
   background-color: #5C5C5C;
-  padding: 15px;
-  border-radius: 8px;
-  width: 400px;
+  width: 80%;
+  margin: 40px auto;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
 }
 
-.album-frame img {
+.band-card img {
   width: 100%;
-  display: block;
-  border-radius: 0px;
+  border-radius: 6px;
 }
 
-.hero h2 {
+.band-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.discography {
+  background-color: #5C5C5C;
+  width: 80%;
+  margin: 0 auto 40px auto;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.discography h2 {
+  margin-bottom: 10px;
   font-size: 18px;
-  font-weight: 600;
-  margin-top: 10px;
+  font-weight: 700;
+}
+
+.discography ul {
+  list-style: none;
+  line-height: 1.8;
+}
+
+.members {
+  background-color: #5C5C5C;
+  width: 80%;
+  margin: 0 auto 60px auto;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.members h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.members ul {
+  list-style: none;
+  line-height: 1.8;
 }
 
 .btn {
   background-color: #fff;
-  color: #000;
   padding: 12px 30px;
+  color: #000;
   border-radius: 8px;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 20px;
+  align-self: center;
 }
 
 .btn:hover {
@@ -127,29 +166,6 @@ footer {
   width: 18px;
   height: 18px;
   filter: invert(100%);
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-  .album-frame {
-    width: 80%;
-  }
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -179,7 +195,7 @@ footer {
   }
 
   .nav-links a {
-    color: #white;
+    color: white;
     font-size: 20px;
     text-decoration: none;
     display: block;
@@ -188,4 +204,33 @@ footer {
   #menu-toggle:checked + .menu-icon + nav .nav-links {
     display: flex;
   }
+
+  .band-card,
+  .discography,
+  .members {
+    width: 90%;
+  }
+}
+
+.band-card strong {
+  color: #000;
+}
+
+.discography h2,
+.members h2 {
+  color: #000;
+}
+
+.band-card strong {
+  color: #000;
+  font-size: 20px;     
+  font-weight: 700;
+}
+
+.discography h2,
+.members h2 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
