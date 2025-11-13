@@ -22,6 +22,7 @@ header {
   align-items: center;
   padding: 20px 40px;
   position: relative;
+  z-index: 1000;
 }
 
 .logo img {
@@ -187,6 +188,7 @@ footer {
     border-radius: 8px;
     text-align: left;
     padding: 10px 0;
+    z-index: 1001;
   }
 
   .nav-links li {
